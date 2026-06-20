@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "carbon",
+	"version": "${version}",
+	"name": "Carbon",
+	"description": "A mod to optimize heavily-modded worlds",
+	"authors": [
+		"Zyros"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/carbon",
+		"sources": "https://github.com/Zyros/Carbon"
+	},
+	"license": "CC-BY-NC-ND-4.0",
+	"icon": "assets/carbon/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.carbon.mod.Carbon"
+		],
+		"client": [
+			"com.carbon.mod.client.CarbonClient"
+		]
+	},
+	"mixins": [
+		"carbon.mixins.json",
+		{
+			"config": "carbon.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
